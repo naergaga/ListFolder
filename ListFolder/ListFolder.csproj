@@ -71,6 +71,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data\Services\ProjectService.cs" />
+    <Compile Include="Migrations\201801231356305_Project_Address_AddTime.cs" />
+    <Compile Include="Migrations\201801231356305_Project_Address_AddTime.Designer.cs">
+      <DependentUpon>201801231356305_Project_Address_AddTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\AddProjectModel.cs" />
     <Compile Include="ViewModels\MvvmModule.cs" />
     <Compile Include="ViewModels\NinjectServiceLocator.cs" />
@@ -119,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201801230538508_Initial.resx">
       <DependentUpon>201801230538508_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801231356305_Project_Address_AddTime.resx">
+      <DependentUpon>201801231356305_Project_Address_AddTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

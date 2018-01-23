@@ -8,7 +8,7 @@
         xmlns:model="clr-namespace:ListFolder.Data.Models"
         mc:Ignorable="d" Height="300" Width="400" Name="ControlAddPj" DataContext="{Binding Path=AddProjectModel,Source={StaticResource ServiceLocator}}">
     
-    <Grid>
+    <Grid DataContext="{Binding Path=Project}">
         <Grid.Resources>
             <Thickness x:Key="inputMargin" Top="2" Right="5" Bottom="2" Left="5" />
             <Style TargetType="Label" x:Key="label">

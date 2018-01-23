@@ -34,7 +34,7 @@ namespace ListFolder
 
         private void AddProject_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(Model.ProjectService.ToString());
+            Model.ProjectService.Add(Model.Project); 
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

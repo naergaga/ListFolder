@@ -13,6 +13,7 @@ namespace ListFolder.Data.Models
         [Required]
         public string Name { get; set; }
         public string Address { get; set; }
+        public DateTime AddTime { get; set; }
         public string Description { get; set; }
 
         public override string ToString()
