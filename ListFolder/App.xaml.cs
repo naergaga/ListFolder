@@ -1,4 +1,7 @@
-﻿using System;
+using ListFolder.Data;
+using ListFolder.Data.Services;
+using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;

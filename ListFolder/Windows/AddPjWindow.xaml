@@ -6,9 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ListFolder"
         xmlns:model="clr-namespace:ListFolder.Data.Models"
-        mc:Ignorable="d" Height="300" Width="400" Name="ControlAddPj" DataContext="{Binding ElementName=ControlAddPj,Path=Project}">
-    <Controls:MetroContentControl.Resources>
-    </Controls:MetroContentControl.Resources>
+        mc:Ignorable="d" Height="300" Width="400" Name="ControlAddPj" DataContext="{Binding Path=AddProjectModel,Source={StaticResource ServiceLocator}}">
+    
     <Grid>
         <Grid.Resources>
             <Thickness x:Key="inputMargin" Top="2" Right="5" Bottom="2" Left="5" />

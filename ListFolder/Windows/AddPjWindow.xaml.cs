@@ -1,4 +1,7 @@
 using ListFolder.Data.Models;
+using ListFolder.Data.Services;
+using ListFolder.ViewModels;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,15 +23,18 @@ namespace ListFolder
     /// </summary>
     public partial class AddPjWindow
     {
-        public Project Project { get; set; } = new Project();
-
         public AddPjWindow()
         {
             InitializeComponent();
         }
 
+        private AddProjectModel _model = null;
+
+        public AddProjectModel Model { get { if (_model == null) { _model = (AddProjectModel)this.DataContext; } return _model; } }
+
         private void AddProject_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(Model.ProjectService.ToString());
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

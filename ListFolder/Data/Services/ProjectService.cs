@@ -8,7 +8,7 @@ namespace ListFolder.Data.Services
 {
     public class ProjectService
     {
-        public ProjectService()
+        public ProjectService(ProjectDbContext context)
         {
 
         }

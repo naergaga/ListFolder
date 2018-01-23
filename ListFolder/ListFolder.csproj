@@ -71,6 +71,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data\Services\ProjectService.cs" />
+    <Compile Include="ViewModels\AddProjectModel.cs" />
+    <Compile Include="ViewModels\MvvmModule.cs" />
+    <Compile Include="ViewModels\NinjectServiceLocator.cs" />
     <Compile Include="Windows\AddPjWindow.xaml.cs">
       <DependentUpon>AddPjWindow.xaml</DependentUpon>
     </Compile>
