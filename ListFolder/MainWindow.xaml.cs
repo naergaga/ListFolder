@@ -1,5 +1,8 @@
-﻿using System;
+using ListFolder.ViewModels;
+using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +21,24 @@ namespace ListFolder
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow: MetroWindow
     {
+       private WindowModel ViewModel { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            ViewModel = new WindowModel { ShowCreate = Visibility.Collapsed };
+            this.DataContext = ViewModel;
+        }
+
+
+
+        private void ProjectNew_Click(object sender, RoutedEventArgs e)
+        {
+            var addPj = new AddPjWindow();
+            transitionLayer.Content = addPj;
+            //this.ViewModel.ShowCreate = Visibility.Visible== this.ViewModel.ShowCreate?Visibility.Collapsed:Visibility.Visible;
         }
     }
 }
