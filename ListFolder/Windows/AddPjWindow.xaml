@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ListFolder"
         xmlns:model="clr-namespace:ListFolder.Data.Models"
-        mc:Ignorable="d" Height="300" Width="400" Name="ControlAddPj" DataContext="{Binding Path=AddProjectModel,Source={StaticResource ServiceLocator}}">
+        mc:Ignorable="d" Name="ControlAddPj" DataContext="{Binding Path=AddProjectModel,Source={StaticResource ServiceLocator}}">
     
     <Grid DataContext="{Binding Path=Project}">
         <Grid.Resources>

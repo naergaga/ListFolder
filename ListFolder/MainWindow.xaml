@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ListFolder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="600" DataContext="{Binding Path=WindowModel, Source={StaticResource ServiceLocator}}">
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
             <Button Content="设置"/>
@@ -17,10 +17,11 @@
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="项目">
                     <MenuItem Header="新建" Click="ProjectNew_Click"/>
+                    <MenuItem Header="退出" Click="Exit_Click"/>
                 </MenuItem>
             </Menu>
             <Grid>
-                <Controls:TransitioningContentControl Name="transitionLayer" Transition="Right">
+                <Controls:TransitioningContentControl Name="transitionLayer" Transition="Right" Content="{Binding Path=ListProjectWindow}">
                 </Controls:TransitioningContentControl>
             </Grid>
         </DockPanel>

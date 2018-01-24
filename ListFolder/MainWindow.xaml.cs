@@ -23,22 +23,24 @@ namespace ListFolder
     /// </summary>
     public partial class MainWindow: MetroWindow
     {
-       private WindowModel ViewModel { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();
-            ViewModel = new WindowModel { ShowCreate = Visibility.Collapsed };
-            this.DataContext = ViewModel;
         }
 
+        private WindowModel _model = null;
 
+        public WindowModel Model { get { if (_model == null) { _model = (WindowModel)this.DataContext; } return _model; } }
 
         private void ProjectNew_Click(object sender, RoutedEventArgs e)
         {
             var addPj = new AddPjWindow();
             transitionLayer.Content = addPj;
-            //this.ViewModel.ShowCreate = Visibility.Visible== this.ViewModel.ShowCreate?Visibility.Collapsed:Visibility.Visible;
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Model.ToString());
         }
     }
 }

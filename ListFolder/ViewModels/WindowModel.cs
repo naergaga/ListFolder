@@ -1,3 +1,4 @@
+using ListFolder.Windows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,18 +9,18 @@ using System.Windows;
 
 namespace ListFolder.ViewModels
 {
-    public class WindowModel:BaseModel
+    public class WindowModel
     {
-        private Visibility createProjectVisibility = Visibility.Collapsed;
-
-        public Visibility ShowCreate
+        public WindowModel(ListProjectWindow listProjectWindow)
         {
-            get { return createProjectVisibility; }
-            set
-            {
-                createProjectVisibility = value;
-                RaisePropertyChanged("ShowCreate");
-            }
+            ListProjectWindow = listProjectWindow;
+        }
+
+        public ListProjectWindow ListProjectWindow { get; set; }
+
+        public override string ToString()
+        {
+            return " ListProjectWindow: " + ListProjectWindow;
         }
     }
 }

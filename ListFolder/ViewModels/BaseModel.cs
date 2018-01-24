@@ -9,13 +9,7 @@ namespace ListFolder.ViewModels
 {
     public class BaseModel: INotifyPropertyChanged
     {
-        public void RaisePropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        public void RaisePropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

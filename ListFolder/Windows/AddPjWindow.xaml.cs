@@ -39,7 +39,8 @@ namespace ListFolder
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-
+            var main = App.Current.MainWindow as MainWindow;
+            main.transitionLayer.Content = main.Model.ListProjectWindow;
         }
     }
 }

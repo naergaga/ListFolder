@@ -16,7 +16,28 @@ namespace ListFolder.ViewModels
             kernel = new StandardKernel(new MvvmModule());
         }
 
-        public AddProjectModel AddProjectModel { get {
-                return kernel.Get<AddProjectModel>(); } }
+        public AddProjectModel AddProjectModel
+        {
+            get
+            {
+                return kernel.Get<AddProjectModel>();
+            }
+        }
+
+        public ListProjectModel ListProjectModel
+        {
+            get
+            {
+                return kernel.Get<ListProjectModel>();
+            }
+        }
+
+        public WindowModel WindowModel
+        {
+            get
+            {
+                return kernel.Get<WindowModel>();
+            }
+        }
     }
 }
